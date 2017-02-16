@@ -1,6 +1,7 @@
 ---
 dependencies:
   - role: geerlingguy.homebrew
+  - role: geerlingguy.mas
 
 galaxy_info:
   author: Shashikant86
