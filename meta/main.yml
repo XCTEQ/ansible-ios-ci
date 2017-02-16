@@ -1,0 +1,18 @@
+---
+dependencies:
+  - role: geerlingguy.homebrew
+
+galaxy_info:
+  author: Shashikant86
+  description: Minimal setup for iOS Continuous Integration Server Setup
+  license: "license (BSD, MIT)"
+  min_ansible_version: 1.9
+  platforms:
+    - name: MacOSX
+      versions:
+        - all
+        - any
+  galaxy_tags:
+    - iOS
+    - CI
+    - Apple
