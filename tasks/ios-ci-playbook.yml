@@ -50,3 +50,6 @@
   with_items:
     - softwareupdate -i -a - ignore iTunes
     - softwareupdate --schedule off
+
+- name: Install Xcode Command Line Tools
+  shell: ../files/Xcode/clitools.sh
