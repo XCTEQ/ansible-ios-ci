@@ -5,14 +5,14 @@ dependencies:
 
 galaxy_info:
   author: Shashikant86
-  description: Minimal setup for iOS Continuous Integration Server Setup
+  description: Minimal setup for iOS Continuous Integration Server on macOS
   license: "license (BSD, MIT)"
   min_ansible_version: 1.9
   platforms:
     - name: MacOSX
       versions:
-        - all
-        - any
+        - macOS 10.12
+        - macOSX 10.11
   galaxy_tags:
     - iOS
     - CI
