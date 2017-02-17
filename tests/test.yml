@@ -2,4 +2,4 @@
 - hosts: localhost
   remote_user: root
   roles:
-    - Shashikant86.ios-ci
+    - Shashikant86.ansible-ios-ci
