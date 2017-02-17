@@ -57,7 +57,7 @@ Get the rdependency roles downloaded by
 
 *  To run it inside local macOS use following command
 
-           $ ansible-playbook tasks/main.yml -i inventory -K
+           $ ansible-playbook playbook.yml -i inventory -K  
 
 The file `defaults/main.yml` is list of all the packages and file `tasks/main.yml` is file to run all these softwares. You can add/remove as needed.
 

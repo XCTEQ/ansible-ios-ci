@@ -1,21 +1,12 @@
 ---
-- hosts: localhost
-  connection: local
-  remote_user: root
+- name: Run Ansible Tasks
+  include: ansible.yml
 
-  vars_files:
-    - ../defaults/main.yml
+- name: Run Ruby Tasks
+  include: ruby-setup.yml
 
-  pre_tasks:
-    - include_vars: "{{ item }}"
-      with_fileglob:
-        - ../config.yml
+- name: Run Xcode Tasks
+  include: xcode-install.yml
 
-  roles:
-    - geerlingguy.homebrew
-
-  tasks:
-     - include: ansible.yml
-     - include: ruby-setup.yml
-     - include: xcode-install.yml
-     - include: macos-defaults.yml
+- name: Run macOS Tasks
+  include: macos-defaults.yml
