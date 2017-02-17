@@ -1,12 +1,17 @@
 Ansible Provisioning of iOS Continuous Integration
 =========
 
-This role can be used to setup iOS Continuous Integration Service on macOS. This role should have all the tools required for the iOS Developers like fastlane, carthage, cocoapods and lot's of homebrew packages. Xcode installtion is still manual but installing simulators and command line tools is covered by this role.  
+This role can be used to setup iOS Continuous Integration Service on macOS. This role should have all the tools required for the iOS Developers like fastlane, carthage, cocoapods and lot's of homebrew packages. Xcode installation is still manual but installing simulators and command line tools is covered by this role. This role is fully tested for
+
+* macOS Seirra
+* Xcode 8.3 beta xip
+
+This should work from Xcode 8 onward as `xip` format is supported from Xcode 8 onwards.   
 
 Requirements
 ------------
 
-Downloading Xcode needs Apple Developer account and it's hard to automate Xcode Installtion process. You need to have Xcode installed manually or for this playbook, you need to get XIP file and put it inside `~/Documents/` directory.
+Downloading Xcode needs Apple Developer account and it's hard to automate Xcode Installation process. You need to have Xcode installed manually or for this playbook, you need to get XIP file and put it inside `~/Documents/` directory.
 
 It's not ideal but Xcode is proprietary software so only requirement is to put `xcode.xip` it inside `~/Documents/` directory.
 
@@ -19,7 +24,7 @@ This role comes with following softwares packages to provision iOS Continuous In
 * Homebrew Cask package Java (Just in case )
 * RVM and Preinstalled Ruby 2.4.0 (You can change version anytime)
 * Pre-installed Gems like bundler, fastlane, Cocoapods, xcpretty
-* Xcode Installation Script when xip is in the `~/Documents/` directory
+* Xcode 8 + Installation Script when xip is in the `~/Documents/` directory
 * Install Comand Line Tools for the Xcode
 * Install Xcode Simulator (9.2 but you can change anytime)
 
@@ -55,6 +60,7 @@ Get the rdependency roles downloaded by
            $ ansible-playbook tasks/main.yml -i inventory -K
 
 The file `defaults/main.yml` is list of all the packages and file `tasks/main.yml` is file to run all these softwares. You can add/remove as needed.
+
 
 
 Dependencies

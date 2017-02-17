@@ -30,6 +30,7 @@ install:
 
 script:
   # Basic role syntax check
+  - ansible-galaxy install -r requirements.yml
   - ansible-playbook tasks/main.yml -i inventory -K
 
 notifications:
