@@ -59,7 +59,7 @@ Get the rdependency roles downloaded by
 
            $ ansible-playbook playbook.yml -i inventory -K  
 
-The file `defaults/main.yml` is list of all the packages and file `tasks/main.yml` is file to run all these softwares. You can add/remove as needed.
+The file `config.yml` is list of all the packages and you can override the file. You can add/remove as needed.
 
 
 
