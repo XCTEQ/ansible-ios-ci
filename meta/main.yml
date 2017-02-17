@@ -11,8 +11,8 @@ galaxy_info:
   platforms:
     - name: MacOSX
       versions:
-        - macOS 10.12
-        - macOSX 10.11
+        - all
+        - any
   galaxy_tags:
     - iOS
     - CI
