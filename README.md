@@ -1,3 +1,6 @@
+
+[![CI Status](http://img.shields.io/travis/Shashikant86/ansible-ios-ci.svg?style=flat)](https://travis-ci.org/Shashikant86/ansible-ios-ci)
+
 Ansible Provisioning of iOS Continuous Integration
 =========
 
