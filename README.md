@@ -1,4 +1,4 @@
-iOS-CI Ansible
+Ansible Provisioning of iOS Continuous Integration
 =========
 
 This role can be used to setup iOS Continuous Integration Service on macOS. This role should have all the tools required for the iOS Developers like fastlane, carthage, cocoapods and lot's of homebrew packages. Xcode installtion is still manual but installing simulators and command line tools is covered by this role.  
