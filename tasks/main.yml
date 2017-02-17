@@ -10,10 +10,11 @@
       with_fileglob:
         - ../config.yml
 
-  roles:
-    - geerlingguy.homebrew
+  # roles:
+  #   - geerlingguy.homebrew
 
   tasks:
-     - include: ansible-setup.yml
-     - include: ruby-setup.yml
+     - include: xcode-install.yml
+    #  - include: ansible-setup.yml
+    #  - include: ruby-setup.yml
      # - include: macos-defaults.yml

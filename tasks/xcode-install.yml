@@ -1,0 +1,9 @@
+---
+- name: Install Xcode from XIP file Location
+  script: ../files/Xcode/xcode-install.sh
+
+# - name: Install Xcode Command Line Tools
+#   script: ../files/Xcode/clitools.sh
+#
+# - name: Install Xcode Simulator
+#   script: ../files/Simulators/download-simulator.sh

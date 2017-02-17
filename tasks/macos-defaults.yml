@@ -9,26 +9,17 @@
     - systemsetup -setdisplaysleep Never
   changed_when: false
 
-- name: Ensure that animations are disabled
-  shell: "{{ item }}"
-  with_items:
-    - defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
-    - defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
-    - defaults write com.apple.dock expose-animation-duration -int 0
-    - defaults write com.apple.dock launchanim -bool false
-  changed_when: false
+# - name: Ensure that animations are disabled
+#   shell: "{{ item }}"
+#   with_items:
+#     - defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+#     - defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+#     - defaults write com.apple.dock expose-animation-duration -int 0
+#     - defaults write com.apple.dock launchanim -bool false
+#   changed_when: false
 
 - name: Software Updates
   shell: "{{ item }}"
   with_items:
     - softwareupdate -i -a - ignore iTunes
     - softwareupdate --schedule off
-
-- name: Ensure that we disabled the defaults.
-  shell: "{{ item }}"
-  with_items:
-    - defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
-    - defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
-    - defaults write com.apple.dock expose-animation-duration -int 0
-    - defaults write com.apple.dock launchanim -bool fals
-  changed_when: false

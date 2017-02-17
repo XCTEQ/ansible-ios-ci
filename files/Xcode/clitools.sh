@@ -1,13 +1,20 @@
-#!/bin/sh
+#!/bin/bash
 
-# Adapted from https://github.com/ayufan/travis-osx-vm-templates/tree/d398e1dd425e3936c02291fda844b987659c8b2c/scripts
+# See http://apple.stackexchange.com/questions/107307/how-can-i-install-the-command-line-tools-completely-from-the-command-line
 
-set -eo pipefail
-
-# create the placeholder file that's checked by CLI updates' .dist code
-# in Apple's SUS catalog
-touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
-# find the CLI Tools update
-PROD=$(softwareupdate -l | grep "\*.*Command Line" | head -n 1 | awk -F"*" '{print $2}' | sed -e 's/^ *//' | tr -d '\n')
-# install it
-softwareupdate -i "$PROD" -v
+echo "Checking Xcode CLI tools"
+# Only run if the tools are not installed yet
+# To check that try to print the SDK path
+xcode-select -p &> /dev/null
+if [ $? -ne 0 ]; then
+  echo "Xcode CLI tools not found. Installing them..."
+  touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress;
+  PROD=$(softwareupdate -l |
+    grep "\*.*Command Line" |
+    head -n 1 | awk -F"*" '{print $2}' |
+    sed -e 's/^ *//' |
+    tr -d '\n')
+  softwareupdate -i "$PROD" -v;
+else
+  echo "Xcode CLI tools OK"
+fi

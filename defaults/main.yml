@@ -1,10 +1,17 @@
 ---
 
+xcode-xip-dir: ~/Documents
+
+
+
+
+
 homebrew_install_path: /usr/local/homebrew
 homebrew_installed_packages:
   - autoconf
   - bash-completion
   - git
+  - rbenv
   - carthage
   - gpg
   - boost
