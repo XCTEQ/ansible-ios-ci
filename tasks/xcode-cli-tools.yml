@@ -5,5 +5,5 @@
 - name: Install Xcode Command Line Tools
   command: bash -c "sh /tmp/clitools.sh"
 
-- name: Delete copied Scripts
+- name: Delete copied Scripts for CLI tools 
   command: bash -c "rm -rf /tmp/tmp.sh"

@@ -4,14 +4,3 @@
 
 - name: Move Xcode To Application
   command: bash -c 'mv ~/Documents/Xcode*.app ~/Applications/'
-
-- name: Install Xcode Command Line Tools
-  copy: src=clitools.sh dest=/tmp/clitools.sh
-  command: bash -c "sh /tmp/clitools.sh"
-
-- name: Install Xcode Simulators
-  copy: src=download-simulator.sh dest=/tmp/download-simulator.sh
-  command: bash -c "sh /tmp/download-simulator.sh"
-
-- name: Delete copied Scripts
-  command: bash -c "sh /tmp/download-simulator.sh"

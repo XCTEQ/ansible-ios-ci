@@ -1,5 +1,5 @@
 ---
-- name: Install Xcode Simulators
+- name: Copy Xcode Simulators Script
   copy: src=download-simulator.sh dest=/tmp/download-simulator.sh
 
 - name: Install Xcode Simulators
