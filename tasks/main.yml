@@ -1,31 +1,27 @@
 ---
-  vars_files:
-    - ../defaults/main.yml
+- name: Run Ansible Tasks
+  include: ansible.yml
 
-  tasks:
-  - name: Run Ansible Tasks
-    include: ansible.yml
+- name: Run Ruby Tasks
+  include: ruby-setup.yml
+  when: configure_ruby_rvm
 
-  - name: Run Ruby Tasks
-    include: ruby-setup.yml
-    when: configure_ruby_rvm
+- name: Setup Custom Swift
+  include: swift-setup.yml
+  when: configure_custom_swift
 
-  - name: Setup Custom Swift
-    include: swift-setup.yml
-    when: configure_custom_swift
+- name: Run Xcode Tasks
+  include: xcode-simulators.yml
+  when: configure_xcode
 
-  - name: Run Xcode Tasks
-    include: xcode-simulators.yml
-    when: configure_xcode
+- name: Run macOS Tasks
+  include: macos-defaults.yml
+  when: configure_masos_defaults
 
-  - name: Run macOS Tasks
-    include: macos-defaults.yml
-    when: configure_masos_defaults
+- name: Run Xcode Tasks
+  include: xcode-install.yml
+  when: configure_xcode
 
-  - name: Run Xcode Tasks
-    include: xcode-install.yml
-    when: configure_xcode
-
-  - name: Run Xcode Tasks
-    include: xcode-cli-tools.yml
-    when: configure_xcode
+- name: Run Xcode Tasks
+  include: xcode-cli-tools.yml
+  when: configure_xcode

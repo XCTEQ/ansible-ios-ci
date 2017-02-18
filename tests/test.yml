@@ -1,8 +1,14 @@
 ---
 - hosts: localhost
   remote_user: root
-  vars:
-    configure_xcode: no
-    configure_masos_defaults: yes
+
+  vars_files:
+    - config.yml
+
+  pre_tasks:
+    - include_vars: "{{ item }}"
+      with_fileglob:
+        - ../config.yml
+
   roles:
     - Shashikant86.ansible-ios-ci

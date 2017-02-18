@@ -1,6 +1,6 @@
 ---
 
-configure_xcode: yes
+configure_xcode: no
 configure_custom_swift: yes
 configure_masos_defaults: no
 configure_ruby_rvm: yes
@@ -10,6 +10,22 @@ ruby_version: 2.4.0
 swift_version_custom: 3.0.1
 
 homebrew_install_path: /usr/local/homebrew
+
+macos_sleep_options:
+  - systemsetup -setsleep Never
+  - systemsetup -setharddisksleep Never
+  - systemsetup -setcomputersleep Never
+
+macos_animation_options:
+  - defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+  - defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+  - defaults write com.apple.dock expose-animation-duration -int 0
+  - defaults write com.apple.dock launchanim -bool false
+
+macos_software_autoupdates:
+  - softwareupdate -i -a - ignore iTunes
+  - softwareupdate --schedule off
+
 
 homebrew_installed_packages:
   - autoconf
