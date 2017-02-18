@@ -11,5 +11,4 @@
         - ../config.yml
 
   roles:
-    - geerlingguy.homebrew
     - Shashikant86.ansible-ios-ci

@@ -1,7 +1,4 @@
 ---
-- hosts: all
-  connection: local
-
   vars_files:
     - ../defaults/main.yml
 

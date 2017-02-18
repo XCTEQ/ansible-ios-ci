@@ -1,4 +1,3 @@
 ---
 - name: geerlingguy.homebrew
-- name: geerlingguy.mas
 - name: Shashikant86.ansible-ios-ci

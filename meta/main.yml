@@ -1,7 +1,6 @@
 ---
 dependencies:
   - role: geerlingguy.homebrew
-  - role: geerlingguy.mas
 
 galaxy_info:
   author: Shashikant86
@@ -14,6 +13,6 @@ galaxy_info:
         - all
         - any
   galaxy_tags:
-    - iOS
-    - CI
-    - Apple
+    - ios
+    - ci
+    - swift
