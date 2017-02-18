@@ -21,4 +21,5 @@
 
 - name: Software Updates
   shell: "{{ item }}"
-  with_items:"{{ macos_software_autoupdates }}"
+  with_items: "{{ macos_software_autoupdates }}"
+  changed_when: false
