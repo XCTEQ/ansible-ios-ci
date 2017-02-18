@@ -1,7 +1,6 @@
 ---
 - name: Install Xcode Simulators
   copy: src=download-simulator.sh dest=/tmp/download-simulator.sh
-  command: bash -c "sh /tmp/download-simulator.sh"
 
 - name: Install Xcode Simulators
   command: bash -c "sh /tmp/download-simulator.sh"
