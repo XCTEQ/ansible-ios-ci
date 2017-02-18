@@ -1,5 +1,6 @@
 ---
-- hosts: localhost
+- hosts: local
+  connection: local
   remote_user: root
 
   vars_files:
