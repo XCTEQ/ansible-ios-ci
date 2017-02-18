@@ -1,22 +1,41 @@
 ---
 
+configure_xcode: no
+configure_custom_swift: yes
+configure_masos_defaults: yes
+configure_ruby_rvm: yes
+
+ruby_version: 2.4.0
+
+swift_version_custom: 3.0.1
+
 homebrew_install_path: /usr/local/homebrew
+
+macos_sleep_options:
+  - systemsetup -setsleep Never
+
+macos_animation_options:
+  - defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+
+macos_software_autoupdates:
+  - softwareupdate -i -a - ignore iTunes
+  - softwareupdate --schedule off
+
+
 homebrew_installed_packages:
   - autoconf
   - bash-completion
   - git
-  - rbenv
   - carthage
   - gpg
   - boost
   - cmake
-  - libevent
-  - python
   - ssh-copy-id
   - openssl
   - wget
   - curl
   - argon/mas/mas
+  - kylef/formulae/swiftenv
 
 homebrew_taps:
   - homebrew/core
