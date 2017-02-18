@@ -1,4 +1,7 @@
 ---
+- name: Install RVM Requirements
+  command: brew install autoconf automake gdbm gmp libksba libtool libyaml openssl pkg-config readline
+
 - name: Install RVM for the user
   command: bash -c "\curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles"
 
