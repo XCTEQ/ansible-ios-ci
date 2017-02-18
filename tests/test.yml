@@ -1,5 +1,8 @@
 ---
 - hosts: localhost
   remote_user: root
+  vars:
+    configure_xcode: no
+    configure_masos_defaults: yes
   roles:
     - Shashikant86.ansible-ios-ci

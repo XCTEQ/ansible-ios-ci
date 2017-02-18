@@ -1,24 +1,30 @@
 ---
 
-xcode-xip-dir: ~/Documents
+configure_xcode: yes
+configure_custom_swift: yes
+configure_masos_defaults: no
+configure_ruby_rvm: yes
+
+ruby_version: 2.4.0
+
+swift_version_custom: 3.0.1
 
 homebrew_install_path: /usr/local/homebrew
+
 homebrew_installed_packages:
   - autoconf
   - bash-completion
   - git
-  - rbenv
   - carthage
   - gpg
   - boost
   - cmake
-  - libevent
-  - python
   - ssh-copy-id
   - openssl
   - wget
   - curl
   - argon/mas/mas
+  - kylef/formulae/swiftenv
 
 homebrew_taps:
   - homebrew/core
@@ -29,8 +35,3 @@ homebrew_taps:
 
 homebrew_cask_apps:
   - java
-
-mas_installed_app_ids:
-  - 497799835 # Xcode
-mas_email: ""
-mas_password: ""
