@@ -23,7 +23,6 @@ macos_animation_options:
   - defaults write com.apple.dock launchanim -bool false
 
 macos_software_autoupdates:
-  - softwareupdate -i -a - ignore iTunes
   - softwareupdate --schedule off
 
 

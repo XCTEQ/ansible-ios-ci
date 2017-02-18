@@ -18,9 +18,7 @@ macos_animation_options:
   - defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 
 macos_software_autoupdates:
-  - softwareupdate -i -a - ignore iTunes
   - softwareupdate --schedule off
-
 
 homebrew_installed_packages:
   - autoconf
